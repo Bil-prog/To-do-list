@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './List'
 
 function List(){
     const [tasks, setTasks] = useState([]);
@@ -32,7 +33,7 @@ function List(){
         }
     }
     return(
-        <>
+        <div className="body">
         <h3>To-Do List</h3>
         <div>
             <input type="text" placeholder="Enter a task..." value={newTask} onChange={handleInputChange} />
@@ -45,7 +46,7 @@ function List(){
             <button className="move" onClick={() => downTask(index)}>Down</button>
             </li>)}
         </ol>
-        </>
+        </div>
     );
 
 }
